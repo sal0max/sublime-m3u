@@ -1,0 +1,39 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: M3U
+scopeName: text.m3u
+fileTypes: [m3u, m3u8]
+uuid: 9d842cd7-2bc7-4e27-b6a1-4ff187ab3a04
+
+patterns:
+# invalid: trailing spaces
+- name: invalid.illegal.m3u
+  match: ^[ \t].*
+
+# EXTM3U
+- name: support.class.m3u
+  match: '^#EXTM3U$'
+
+# EXTINF
+- name: meta.function.m3u
+  begin: ^#EXTINF
+  end: (,)(.*)|$
+  patterns:
+  - name: keyword.control.m3u
+    match: ':'
+  - name: constant.numeric.m3u
+    match: -?\d+
+  beginCaptures:
+    '0': {name: support.constant.m3u}
+  endCaptures:
+    '1': {name: keyword.control.m3u}
+    '2': {name: meta.value.m3u}
+
+# regular line
+- name: string.unquoted.m3u
+  match: ^[^#].+
+
+# comment
+- name: comment.line.number-sign.m3u
+  match: ^#.*
+
