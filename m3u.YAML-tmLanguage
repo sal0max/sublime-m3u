@@ -15,7 +15,7 @@ patterns:
   match: '^#EXTM3U$'
 
 # EXTINF
-- name: meta.function.m3u
+- name: meta.function.extinf.m3u
   begin: ^#EXTINF
   end: (,)(.*)|$
   patterns:
@@ -29,6 +29,18 @@ patterns:
     '1': {name: keyword.control.m3u}
     '2': {name: meta.value.m3u}
 
+# other EXTs
+- name: meta.function.ext.m3u
+  begin: ^#EXT[-\w]*
+  end: $
+  patterns:
+  - name: keyword.control.m3u
+    match: ':'
+  - name: meta.value.m3u
+    match: .*
+  beginCaptures:
+    '0': {name: support.constant.m3u}
+
 # regular line
 - name: string.unquoted.m3u
   match: ^[^#].+
@@ -36,4 +48,3 @@ patterns:
 # comment
 - name: comment.line.number-sign.m3u
   match: ^#.*
-

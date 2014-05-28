@@ -50,7 +50,7 @@
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>meta.function.m3u</string>
+			<string>meta.function.extinf.m3u</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -64,6 +64,37 @@
 					<string>-?\d+</string>
 					<key>name</key>
 					<string>constant.numeric.m3u</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^#EXT[-\w]*</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.m3u</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>$</string>
+			<key>name</key>
+			<string>meta.function.ext.m3u</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>:</string>
+					<key>name</key>
+					<string>keyword.control.m3u</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>.*</string>
+					<key>name</key>
+					<string>meta.value.m3u</string>
 				</dict>
 			</array>
 		</dict>
