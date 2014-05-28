@@ -22,7 +22,7 @@ patterns:
   - name: keyword.control.m3u
     match: ':'
   - name: constant.numeric.m3u
-    match: -?\d+
+    match: -?[\d\.]+
   beginCaptures:
     '0': {name: support.constant.m3u}
   endCaptures:

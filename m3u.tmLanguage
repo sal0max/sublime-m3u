@@ -61,7 +61,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>-?\d+</string>
+					<string>-?[\d\.]+</string>
 					<key>name</key>
 					<string>constant.numeric.m3u</string>
 				</dict>
