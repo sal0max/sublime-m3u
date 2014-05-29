@@ -92,7 +92,13 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>.*</string>
+					<string>[=,@]</string>
+					<key>name</key>
+					<string>keyword.operator.m3u</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>([^=,@])|.*</string>
 					<key>name</key>
 					<string>meta.value.m3u</string>
 				</dict>

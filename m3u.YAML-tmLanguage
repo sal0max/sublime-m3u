@@ -36,8 +36,10 @@ patterns:
   patterns:
   - name: keyword.control.m3u
     match: ':'
+  - name: keyword.operator.m3u
+    match: '[=,@]'
   - name: meta.value.m3u
-    match: .*
+    match: ([^=,@])|.*
   beginCaptures:
     '0': {name: support.constant.m3u}
 
