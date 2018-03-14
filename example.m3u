@@ -1,0 +1,20 @@
+#EXTM3U
+#EXTINF:233,Everclear - So Much For The Afterglow
+Alternative\everclear - SMFTA.mp3
+#EXTINF:227,Weird Al - Everything You Know Is Wrong
+Comedy\Weird Al - Everything You Know Is Wrong.mp3
+#EXTINF:187,Weird Al Yankovic - This is the Life
+Weird Al - This Is The Life.mp3
+#EXTINF:129,Weird Al: Bad Hair Day - Gump
+http://www.site.com/~user/gump.mp3
+
+# fLOYD pINK
+#EXTINF:119,Pink Floyd - In The Flesh
+R:\Music\Pink Floyd\1979---The_Wall_CD1\1.In_The_Flesh.mp3
+#EXTINF:217,Pink Floyd - One Of My Turns
+R:\Music\Pink Floyd\1979---The_Wall_CD1\10.One_Of_My_Turns.wav
+
+# here come the streams!
+
+#EXTINF:-1,My Cool Stream
+http://www.site.com:8000/listen.pls
